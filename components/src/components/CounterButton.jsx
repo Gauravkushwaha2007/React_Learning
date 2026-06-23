@@ -8,7 +8,7 @@ const CounterBUtton = ()=> {
         <button
           type="button"
           onClick={() => setCount((count) => count + 1)}
-          className="bg-white px-3 py-1 rounded-md mt-2 text-green-950 text-xl border-[1px] text-shadow-red-600"
+          className="bg-white px-3 py-1 rounded-md mt-2 text-xl border-1 border-violet-500 hover:scale-105 hover:shadow-xl hover:shadow-violet-300 shadow-md shadow-violet-200  transition-all duration-300 ease-in-out"
         >
           Count is <span className="text-xl text-purple-900"> {count} </span> 
         </button>
