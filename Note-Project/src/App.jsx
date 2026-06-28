@@ -77,9 +77,11 @@ const App = () => {
   }
 
 return (
-  <div className="min-h-screen bg-gray-100 p-6">
+  <div className="min-h-screen bg-gradient-to-br from-slate-200 via-gray-100 to-green-50 p-6">
     {toast && (
-      <div className="fixed top-5 right-5 border-1 border-white shadow-xl shadow-green-200 bg-green-700 text-white font-bold px-4 py-2 rounded-xl shadow-lg">
+      <div 
+      className=" fixed top-5 right-5 bg-green-600 text-white font-semibold px-5 py-3 rounded-xl shadow-2xl animate-pulse z-50 "
+      >
         {toast}
       </div>
     )}
@@ -90,16 +92,21 @@ return (
           onSubmit={submit}
           className="bg-white p-8 rounded-2xl shadow-md flex flex-col gap-4"
         >
-          <h1 className="text-2xl font-bold text-center">
-            Create Notes
+          <h1 className="text-3xl font-extrabold text-center text-green-950">
+            📝 Notes
           </h1>
+
+          <p className="text-center text-green-700 text-sm">
+              Capture your ideas instantly
+          </p>
           
           <input
+          
             type="text"
             placeholder="Title here, "
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="border rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-blue-400"
+            className="border border-gray-300 rounded-xl px-4 py-3 outline-none transition-all focus:ring-1 focus:ring-green-600 focus:border-green-100"
           />
 
           <input
@@ -107,15 +114,16 @@ return (
             placeholder="What's on your mind?"
             value={text}
             onChange={(e) => setText(e.target.value)}
-            className="border rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-blue-400"
+            className="border border-gray-300 rounded-xl px-4 py-3 outline-none transition-all focus:ring-1 focus:ring-green-700 focus:border-green-200"
+            
           />
 
           <button
             id="btn"
             type="submit"
-            className="bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+            className="bg-gradient-to-r from-green-500 to-green-700 text-white py-3 rounded-xl font-semibold hover:scale-[1.02] active:scale-95 transition-all"
           >
-            {editingId == null? 'Submit': 'Update'}
+            {editingId == null? 'Create Note': 'Update Note'}
           </button>
         </form>
       </div>
@@ -126,10 +134,10 @@ return (
         <div className="mb-6">
           <input
             type="search"
-            placeholder="🔍 Search notes..."
+            placeholder="Search notes... 🔍 "
             value={search}
             onChange={(e)=>setSearch(e.target.value)}
-            className="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-400 shadow-md"
+            className="w-full bg-white border border-gray-300 rounded-xl px-5 py-3 shadow-md shadow-green-100 outline-none transition focus:ring-1 focus:ring-green-500 "
           />
         </div>
 
