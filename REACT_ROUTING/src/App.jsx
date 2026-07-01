@@ -39,13 +39,14 @@
 import { Route, Routes } from "react-router-dom"
 import Home from './Pages/Home'
 import About from './Pages/About'
-import Profile from './Pages/Profile'
-import Contact from "./Pages/Contact"
 import Navbar from "./components/Navbar"
 import PageNotFound from "./Pages/PageNotFound"
 import Men from "./Pages/men"
 import Women from './Pages/Women'
 import Service from "./Pages/Service"
+
+import Products from "./Pages/Products"
+
 const App = () => {
   return (<>
     <div >
@@ -53,12 +54,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home></Home>}/>
         <Route path="/about" element={<About></About>}/>
-        <Route path="/contact" element={<Contact></Contact>}/>
-        <Route path="/profile" element={<Profile></Profile>}/>
-        <Route path="/service" element={<Service></Service>}> 
+        <Route path="/service" element={<Service></Service>}>
           <Route path="men" element={<Men></Men>} />
           <Route path="women" element={<Women></Women>} />
         </Route>
+
+        <Route path="/products" element={<Products></Products>}/>
+        <Route path="/products/:id" element={<Products></Products>} />
         <Route path="*" element={<PageNotFound></PageNotFound>} />
       </Routes>
     </div>

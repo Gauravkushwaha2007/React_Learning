@@ -10,9 +10,8 @@ const Navbar = () => {
       <div className='flex flex-wrap gap-10 font-medium text-pink-600'>        
         <NavLink className={({isActive})=>isActive? "text-red-600 font-bold underline" : "text-red-500"} to='/'>{({isActive})=>(<span>{isActive? "👉About": "About"}</span>)}</NavLink>
         <NavLink className={({isActive})=>isActive? "text-red-600 font-bold underline" : "text-red-500"} to='/about'>{({isActive})=>(<span>{isActive ? "👉About": "About"}</span>)}</NavLink>
-        <NavLink className={({isActive})=>isActive? "text-red-600 font-bold underline" : "text-red-500"} to='/profile'>{({isActive})=>(<sapn>{isActive ? "👉Profile" : "Profile" }</sapn>)}</NavLink>
-        <NavLink className={({isActive})=>isActive? "text-red-600 font-bold underline" : "text-red-500"} to='/contact'>{({isActive})=>(<span>{isActive ? "👉Contact" : "Contact" }</span>)}</NavLink>
         <NavLink className={({isActive})=>isActive? "text-red-600 font-bold underline" : "text-red-500"} to='/service'>{({isActive})=>(<span>{isActive ? "Service" : "Service" }</span>)}</NavLink>
+        <NavLink className={({isActive})=>isActive? "text-red-600 font-bold underline" : "text-red-500"} to='/products'><span>Products</span></NavLink>
       </div>
     </div>
     </>
