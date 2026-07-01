@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 const Navbar = () => {
   return (
     <>
@@ -7,11 +7,12 @@ const Navbar = () => {
       <div>
         <h3 className='font-bold text-xl'><span className='text-red-600'>G</span><span className='text-pink-600'>aura</span>v</h3>
       </div>
-      <div className='flex flex-wrap gap-10 font-medium text-pink-600'>
-        <Link className='hover:scale-105 active:text-pink-950' to="/"> <span className='text-black font-medium '>H</span>ome</Link>
-        <Link className='hover:scale-105 active:text-pink-950' to="/about"> <span className='text-black font-medium '>A</span>bout</Link>
-        <Link className='hover:scale-105 active:text-pink-950' to="/profile"> <span className='text-black font-medium '>P</span>rofile</Link>
-        <Link className='hover:scale-105 active:text-pink-950' to="/contact"> <span className='text-black font-medium '>C</span>ontact</Link>
+      <div className='flex flex-wrap gap-10 font-medium text-pink-600'>        
+        <NavLink className={({isActive})=>isActive? "text-red-600 font-bold underline" : "text-red-500"} to='/'>{({isActive})=>(<span>{isActive? "👉About": "About"}</span>)}</NavLink>
+        <NavLink className={({isActive})=>isActive? "text-red-600 font-bold underline" : "text-red-500"} to='/about'>{({isActive})=>(<span>{isActive ? "👉About": "About"}</span>)}</NavLink>
+        <NavLink className={({isActive})=>isActive? "text-red-600 font-bold underline" : "text-red-500"} to='/profile'>{({isActive})=>(<sapn>{isActive ? "👉Profile" : "Profile" }</sapn>)}</NavLink>
+        <NavLink className={({isActive})=>isActive? "text-red-600 font-bold underline" : "text-red-500"} to='/contact'>{({isActive})=>(<span>{isActive ? "👉Contact" : "Contact" }</span>)}</NavLink>
+        <NavLink className={({isActive})=>isActive? "text-red-600 font-bold underline" : "text-red-500"} to='/service'>{({isActive})=>(<span>{isActive ? "Service" : "Service" }</span>)}</NavLink>
       </div>
     </div>
     </>
