@@ -1,8 +1,11 @@
 import React from 'react'
-
+import BackNavigate from '../components/BackNavigate'
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <BackNavigate></BackNavigate>
+      <h2>Home</h2>
+    </div>
   )
 }
 

@@ -1,8 +1,12 @@
 import React from 'react'
+import BackNavigate from '../components/BackNavigate'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <BackNavigate></BackNavigate>
+      <h2>About</h2>
+    </div>
   )
 }
 

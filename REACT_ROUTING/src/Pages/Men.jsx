@@ -1,6 +1,8 @@
 const Men = () => {
   return (
-    <div>Men's Collection</div>
+    <div>
+      Men's Collection
+    </div>
   )
 }
 
